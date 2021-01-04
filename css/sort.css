@@ -14,24 +14,50 @@ body {
 .disp_area {
     align-items: center;
     width: 200px;
-    background: #ccc;
-    margin: 0px;
+    height: 100px;
+    background: #ddd;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
 }
 
-#start {
+.start {
     /* justify-content: center; */
     /* align-self: center; */
-    font-size: 20px;
+    font-size: 24px;
     width: 200px;
+    height: 100px;
     border: none;
     background-color: #ddaabb;
     color: aliceblue;
-    /* margin: 5px auto; */
-    padding: 0px;
+    margin: 10px auto;
+    padding: 0;
     text-align: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#reset {
+    /* justify-content: center; */
+    /* align-self: center; */
+    font-size: 24px;
+    width: 200px;
+    height: 100px;
+    border: none;
+    background-color: #dddddd;
+    color: aliceblue;
+    margin: 10px auto;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#start :hover {
-    top: -2px;
+#start:hover {
     opacity: 0.5;
 }
