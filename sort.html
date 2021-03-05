@@ -9,15 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <div class="main">
+    <h1>
+        <div class="title_area"></div>
+    </h1>
+    <h2>色々なソート方法を試してみよう</h2>
+    <div class="wrapper">
         <div class="disp_area"></div>
-        <div class="start" onclick="setBubble()">Bubble Sort!</div>
-        <div class="start" onclick="setSeletcion()">Selection Sort!</div>
-        <div class="start" onclick="setQuick()">Quick Sort!</div>
-        <div class="start" onclick="setInsert()">Insertion Sort!</div>
+        <div class="main">
+            <div class="start" onclick="sortFunction(bubbleSort)">Bubble Sort!</div>
+            <div class="start" onclick="sortFunction(selectionSort)">Selection Sort!</div>
+            <div class="start" onclick="sortFunction(quickSort)">Quick Sort!</div>
+            <div class="start" onclick="sortFunction(insertionSort)">Insertion Sort!</div>
+            <div class="start" onclick="sortFunction(shellSort)">Shell Sort!</div>
+            <div class="start" onclick="sortFunction(countingSort)">Counting Sort!</div>
+        </div>
         <div id="reset" onclick="setDefault()">RESET</div>
     </div>
     <script src="js/sort.js"></script>
+
 </body>
 </html>
