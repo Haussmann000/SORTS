@@ -1,7 +1,8 @@
 let array = [];
 const arrayNumber = 7;
 const maxNumber = 100;
-const start = document.querySelector("#start");
+const start = document.querySelectorAll(".start");
+const reset = document.querySelector("#reset");
 const disp = document.querySelector(".disp_area");
 const title = document.querySelector(".title_area");
 const titleCharacter = ["S", "O", "R", "T", "S", "!"];
@@ -46,6 +47,16 @@ const setDefault = () => {
     createSpan(array, "resetcolor");
 }
 
+
+const getId = () => {
+    let id = [];
+        start.forEach(e => {
+            id = console.log(e.getAttribute("id"));
+            return id;
+        });
+    }
+
+console.log(getId());
 
 //// ソート
 
@@ -167,3 +178,7 @@ const countingSort = (arr, min = 1, max = maxNumber) => {
 
 
 window.addEventListener('DOMContentLoaded', initTitle());
+reset.addEventListener(
+    'click', setDefault
+);
+
