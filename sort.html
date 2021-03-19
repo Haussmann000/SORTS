@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sort.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>
+        <div class="title_area"></div>
+    </h1>
+    <h2>色々なソート方法を試してみよう</h2>
+    <div class="wrapper">
+        <div class="disp_area"></div>
+        <div class="main">
+            <div class="start" onclick="sortFunction(bubbleSort)">Bubble Sort!</div>
+            <div class="start" onclick="sortFunction(selectionSort)">Selection Sort!</div>
+            <div class="start" onclick="sortFunction(quickSort)">Quick Sort!</div>
+            <div class="start" onclick="sortFunction(insertionSort)">Insertion Sort!</div>
+            <div class="start" onclick="sortFunction(shellSort)">Shell Sort!</div>
+            <div class="start" onclick="sortFunction(countingSort)">Counting Sort!</div>
+        </div>
+        <div id="reset" onclick="setDefault()">RESET</div>
+    </div>
+    <script src="js/sort.js"></script>
+
+</body>
+</html>
