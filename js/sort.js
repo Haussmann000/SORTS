@@ -52,21 +52,21 @@ const setDefault = () => {
     createSpan(array, "resetcolor");
 }
 
-const setSort = (id) => {
+const setSort = id => {
     document.querySelector(`#${id}`);
     console.log(id);
-    sortFunction(id);
+    sortFunction(id());
 }
 
 const getId = () => {
     let id = [];
         start.forEach(e => {
-            id = console.log(e.getAttribute("id"));
+            id = e.getAttribute("id");
             return id;
         });
     }
 
-getId();
+
 
 //// ソート
 
@@ -189,9 +189,10 @@ const countingSort = (arr, min = 1, max = maxNumber) => {
 
 main.addEventListener(
     'click',
-    setDefault
+    setSort(getId())
 );
 window.addEventListener('DOMContentLoaded', initTitle());
+
 reset.addEventListener(
     'click',
     quickSort
