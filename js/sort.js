@@ -194,6 +194,6 @@ main.addEventListener(
 window.addEventListener('DOMContentLoaded', initTitle());
 reset.addEventListener(
     'click',
-    setDefault
+    quickSort
 );
 
