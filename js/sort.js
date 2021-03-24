@@ -1,6 +1,11 @@
+// sortメソッドをjsonオブジェクトに入れてidをkeyにして取り出す
+// createSpanでidも付与する
+// 
+
 let array = [];
-const arrayNumber = 7;
+const arrayNumber = 10;
 const maxNumber = 100;
+const main = document.querySelector(".main");
 const start = document.querySelectorAll(".start");
 const reset = document.querySelector("#reset");
 const disp = document.querySelector(".disp_area");
@@ -47,6 +52,11 @@ const setDefault = () => {
     createSpan(array, "resetcolor");
 }
 
+const setSort = (id) => {
+    document.querySelector(`#${id}`);
+    console.log(id);
+    sortFunction(id);
+}
 
 const getId = () => {
     let id = [];
@@ -56,7 +66,7 @@ const getId = () => {
         });
     }
 
-console.log(getId());
+getId();
 
 //// ソート
 
@@ -177,8 +187,13 @@ const countingSort = (arr, min = 1, max = maxNumber) => {
 }
 
 
+main.addEventListener(
+    'click',
+    setDefault
+);
 window.addEventListener('DOMContentLoaded', initTitle());
 reset.addEventListener(
-    'click', setDefault
+    'click',
+    setDefault
 );
 
