@@ -34,18 +34,19 @@ const createSpan = (items, className = "colors") => {
     return disp;
 }
 
-const createButton = () => {
-    let div = document.createElement("div");
-}
+// const createButton = () => {
+//     let div = document.createElement("div");
+// }
 
-const method = JSON.stringify(methods);
-console.log(methods['key'].bubbleSort(array));
 
 
 const initTitle = () => {
     disp.innerHTML = createRandom(array);
     createSpan(titleCharacter, "colors");
 }
+
+// const method = JSON.stringify(methods);
+
 
 const sortFunction = method =>{
     const start = performance.now();
@@ -71,11 +72,12 @@ const setSort = id => {
 
 const getId = () => {
     let id = [];
-        start.forEach(e => {
-            id = e.getAttribute("id");
-            return id;
-        });
-    }
+    start.forEach(e => {
+        id = e.getAttribute("id");
+        return id;
+    });
+}
+
 
 
 
@@ -191,7 +193,8 @@ reset.addEventListener(
     'click',
     setDefault
     );
-    
+
+console.log(methods[0].bubbleSort(array));
 
 // main.addEventListener(
 //     'click',
