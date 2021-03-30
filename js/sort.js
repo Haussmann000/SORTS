@@ -2,7 +2,7 @@
 // createSpanでidも付与する
 // 
 
-import { bubbleSort } from './module.js';
+import { methods } from './sortMethods.json.js';
 
 let array = [];
 const arrayNumber = 10;
@@ -27,12 +27,20 @@ const createRandom = (array) => {
 const createSpan = (items, className = "colors") => {
     disp.innerHTML = "";
     items.forEach(e => {
-        let child = document.createElement("span")
+        let child = document.createElement("span");
         child.innerHTML = e;
         disp.appendChild(child).setAttribute("class", className);
     })
     return disp;
 }
+
+const createButton = () => {
+    let div = document.createElement("div");
+}
+
+const method = JSON.stringify(methods);
+console.log(methods['key'].bubbleSort(array));
+
 
 const initTitle = () => {
     disp.innerHTML = createRandom(array);
@@ -185,7 +193,7 @@ reset.addEventListener(
     );
     
 
-main.addEventListener(
-    'click',
-    sortFunction(bubbleSort())
-    );
+// main.addEventListener(
+//     'click',
+//     sortFunction(bubbleSort())
+//     );
