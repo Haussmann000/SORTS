@@ -34,9 +34,9 @@ const createSpan = (items, className = "colors") => {
     return disp;
 }
 
-// const createButton = () => {
-//     let div = document.createElement("div");
-// }
+const createButton = () => {
+    let div = document.createElement("div");
+}
 
 
 
@@ -44,9 +44,6 @@ const initTitle = () => {
     disp.innerHTML = createRandom(array);
     createSpan(titleCharacter, "colors");
 }
-
-// const method = JSON.stringify(methods);
-
 
 const sortFunction = method =>{
     const start = performance.now();
