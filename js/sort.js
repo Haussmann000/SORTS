@@ -2,6 +2,8 @@
 // createSpanでidも付与する
 // 
 
+import { bubbleSort } from './module.js';
+
 let array = [];
 const arrayNumber = 10;
 const maxNumber = 100;
@@ -13,7 +15,7 @@ const title = document.querySelector(".title_area");
 const titleCharacter = ["S", "O", "R", "T", "S", "!"];
 
 const createRandom = (array) => {
-    const integers = Array.from(Array(maxNumber).keys())
+    Array.from(Array(maxNumber).keys())
     for(let i = 0; i < arrayNumber; i++) {
         var rand = Math.floor(Math.random() * (maxNumber));
         array.push(rand);
@@ -41,6 +43,7 @@ const sortFunction = method =>{
     const start = performance.now();
     method(array);
     const end = performance.now();
+    console.log(method.name);
     console.log(end - start);
     createSpan(array);
 };
@@ -55,7 +58,7 @@ const setDefault = () => {
 const setSort = id => {
     document.querySelector(`#${id}`);
     console.log(id);
-    sortFunction(id());
+    sortFunction(getId());
 }
 
 const getId = () => {
@@ -70,20 +73,7 @@ const getId = () => {
 
 //// ソート
 
-// Bubble Sort
-function bubbleSort(items){
-    let length = items.length;
-    for (let i = (length - 1); i > 0; i--){
-        for (let j = (length - i); j > 0; j--){
-            if(items[j] < items[j - 1]){
-                let tmp = items[j];
-                items[j] = items[j - 1];
-                items[j - 1] = tmp;
-            }
-        }
-    }
-    return items;
-}
+
 
 
 // Selection Sort
@@ -187,14 +177,15 @@ const countingSort = (arr, min = 1, max = maxNumber) => {
 }
 
 
-main.addEventListener(
-    'click',
-    setSort(getId())
-);
 window.addEventListener('DOMContentLoaded', initTitle());
 
 reset.addEventListener(
     'click',
-    quickSort
-);
+    setDefault
+    );
+    
 
+main.addEventListener(
+    'click',
+    sortFunction(bubbleSort())
+    );

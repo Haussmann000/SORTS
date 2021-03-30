@@ -1,12 +1,16 @@
 {
     "data" : [
             {
-                "key": "bubbleSort",
-                "function": "a"
+                "key": 1,
+                "bane": "bubbleSort"
             },
             {
-                "key" : "selectionSort",
-                "function": "b"
+                "key": 2,
+                "name" : "selectionSort"
+            },
+            {
+                "key": 3,
+                "name" : "selectionSort"
             }
         ]
 }
